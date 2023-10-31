@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #679289;
+            /* width: 100%; */
+        }
+        .hamburger, .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+        }
+        .close {
+            background: #071E22;
+        }
+        .navbar {
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            list-style: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            background: #071E22;
+            color: #1D7874;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: transform 0.2s ease;
+        }
+        .navbar:target {
+        transform: translateY(0);
+        }
+        li a {
+            text-decoration: none;
+            padding-bottom: 0.5rem;
+            color: inherit;
+        }
+        li a:hover, li a:focus {
+            /* show border bottom */
+            border-bottom: 2px solid #1D7874;;
+        }
+        .material-icons {
+            font-size: 36px;
+            color: #1D7874;
+        }
+        .menu {
+            color:#071E22;
+        }
+    </style>
+    <title>Example of Hamburger Menu no JS</title>
+</head>
+
+<body>
+    <ul class="navbar" id="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacts</a></li>
+        <a class="close" href="#"><span class="material-icons">close</span></a>
+    </ul>
+    <a class="hamburger" href="#navbar">
+        <span class="material-icons menu">menu</span>
+      </a>
+    <!-- Original post and code by ljc-dev https://dev.to/ljcdev/hamburger-css-no-js-2dfa -->
+</body>
+</html>
